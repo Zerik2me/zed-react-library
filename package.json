@@ -1,0 +1,52 @@
+{
+  "name": "@zerikb/icons",
+  "version": "0.0.1",
+  "description": "React Icon Library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node scripts/build-icons.mjs",
+    "build": "npm run generate && tsup"
+  },
+  "keywords": [
+    "react",
+    "icon",
+    "svg"
+  ],
+  "author": "zerikb",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@types/react": "^19.3.0",
+    "lucide-static": "^1.70.0",
+    "react": "^19.3.1",
+    "svgo": "^4.1.0",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  }
+}
